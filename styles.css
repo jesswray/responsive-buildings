@@ -7,8 +7,59 @@
 }
 
 .root {
-    height: 100px;
-    width: 100px;
+    width: 100%;
     margin: auto;
-    background-color: red;
+}
+
+.city-container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px solid green;
+    margin-bottom: 40px;
+}
+
+.building {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.building::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    height: 5px;
+    width: 2px;
+    border: 1px solid black;
+}
+
+@media (min-width: 768px) {
+    .building {
+        max-height: 200px; 
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 1198px) {
+    .building {
+        max-height: 120px; 
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+}
+
+.building-block {
+    width: 10;
+    height: 10px;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.block-container {
+    border: 1px solid black;
 }
